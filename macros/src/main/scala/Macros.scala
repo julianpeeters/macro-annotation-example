@@ -11,7 +11,6 @@ object helloMacro {
     import c.universe._
     import Flag._
 
-    val x = "x"
     val result = {
       annottees.map(_.tree).toList match {
 //Thanks to Eugene Burmako once again!
