@@ -11,10 +11,10 @@ object helloMacro {
     import c.universe._
     import Flag._
 
-    val x = "x"//scala.io.Source.fromFile("input.txt").mkString
+    val x = "x"
     val result = {
       annottees.map(_.tree).toList match {
-
+//Thanks to Eugene Burmako once again!
         case q"$mods class $name[..$tparams](..$first)(...$rest) extends ..$parents { $self => ..$body }" :: Nil =>
           val CASEACCESSOR = (1 << 24).toLong.asInstanceOf[FlagSet]
           val PARAMACCESSOR = (1 << 29).toLong.asInstanceOf[FlagSet]
