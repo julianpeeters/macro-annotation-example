@@ -13,14 +13,10 @@ object helloMacro {
 
     val result = {
       annottees.map(_.tree).toList match {
-//Thanks to Eugene Burmako once again!
+//Thanks to Eugene Burmako and Den Shabalin
         case q"$mods class $name[..$tparams](..$first)(...$rest) extends ..$parents { $self => ..$body }" :: Nil =>
-          val CASEACCESSOR = (1 << 24).toLong.asInstanceOf[FlagSet]
-          val PARAMACCESSOR = (1 << 29).toLong.asInstanceOf[FlagSet]
-          val helloMods = Modifiers(CASEACCESSOR | PARAMACCESSOR | DEFAULTPARAM)
-          val helloVal = q"""$helloMods val x: String = "hello macro!""""
+          val helloVal = q"""val x: String = "hello macro!""""
           q"$mods class $name[..$tparams](..$first, $helloVal)(...$rest) extends ..$parents { $self => ..$body }"
-
       }
     }
     c.Expr[Any](result)
