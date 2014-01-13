@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-lang.macroparadise#macros_2.10;1.0.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.macroparadise#macros_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4ab081ea[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@15c35deb[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
@@ -1256,19 +1256,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.macroparadise#macros_2.10;1.0.0->org.scalamacros#paradise_2.10.3;2.0.0-M2 [plugin->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalamacros#paradise_2.10.3;2.0.0-M2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalamacros#paradise_2.10.3;2.0.0-M2 {plugin=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried /home/julianpeeters/.ivy2/local/org.scalamacros/paradise_2.10.3/2.0.0-M2/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalamacros#paradise_2.10.3;2.0.0-M2[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scalamacros#paradise_2.10.3;2.0.0-M2[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.pom (2.0.0-M2)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalamacros#paradise_2.10.3;2.0.0-M2!paradise_2.10.3.pom(pom.original) (631ms)[0m
-[0m[[0mdebug[0m] [0m		tried /home/julianpeeters/.ivy2/local/org.scalamacros/paradise_2.10.3/2.0.0-M2/jars/paradise_2.10.3.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scalamacros#paradise_2.10.3;2.0.0-M2 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalamacros#paradise_2.10.3;2.0.0-M2[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.scalamacros#paradise_2.10.3;2.0.0-M2[0m
+[0m[[0mdebug[0m] [0m	found org.scalamacros#paradise_2.10.3;2.0.0-M2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.macroparadise#macros_2.10;1.0.0->org.scalamacros#paradise_2.10.3;2.0.0-M2 [plugin->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.macroparadise#macros_2.10;1.0.0->org.scalamacros#paradise_2.10.3;2.0.0-M2 [plugin->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.10.3;2.0.0-M2->org.scala-lang#scala-compiler;2.10.3 [compile->master(*)][0m
@@ -1378,16 +1368,11 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.xerial.snappy#snappy-java;1.0.5!snappy-java.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-compress;1.4.1!commons-compress.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.tukaani#xz;1.0!xz.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalamacros#paradise_2.10.3;2.0.0-M2!paradise_2.10.3.jar (24678ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalamacros#paradise_2.10.3;2.0.0-M2!paradise_2.10.3.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.3!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4164ms :: artifacts dl 24733ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3426ms :: artifacts dl 253ms[0m
 [0m[[0mdebug[0m] [0m	report for org.scala-lang.macroparadise#macros_2.10;1.0.0 compile produced in /home/julianpeeters/Dropbox/macro-annotation-example/macros/target/resolution-cache/reports/org.scala-lang.macroparadise-macros_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for org.scala-lang.macroparadise#macros_2.10;1.0.0 runtime produced in /home/julianpeeters/Dropbox/macro-annotation-example/macros/target/resolution-cache/reports/org.scala-lang.macroparadise-macros_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for org.scala-lang.macroparadise#macros_2.10;1.0.0 test produced in /home/julianpeeters/Dropbox/macro-annotation-example/macros/target/resolution-cache/reports/org.scala-lang.macroparadise-macros_2.10-test.xml[0m
@@ -1401,5 +1386,5 @@
 [0m[[0mdebug[0m] [0m	report for org.scala-lang.macroparadise#macros_2.10;1.0.0 docs produced in /home/julianpeeters/Dropbox/macro-annotation-example/macros/target/resolution-cache/reports/org.scala-lang.macroparadise-macros_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for org.scala-lang.macroparadise#macros_2.10;1.0.0 pom produced in /home/julianpeeters/Dropbox/macro-annotation-example/macros/target/resolution-cache/reports/org.scala-lang.macroparadise-macros_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for org.scala-lang.macroparadise#macros_2.10;1.0.0 scala-tool produced in /home/julianpeeters/Dropbox/macro-annotation-example/macros/target/resolution-cache/reports/org.scala-lang.macroparadise-macros_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (4164ms resolve - 24733ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (3426ms resolve - 253ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

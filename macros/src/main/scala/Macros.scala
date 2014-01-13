@@ -7,16 +7,35 @@ import scala.annotation.StaticAnnotation
 import scala.io._
 
 object helloMacro {
+
+
+
   def impl(c: Context)(annottees: c.Expr[Any]*): c.Expr[Any] = {
     import c.universe._
     import Flag._
 
+    def makeDefault(valDef: ValDef) = valDef match {
+      case ValDef(mods, name, tpt, rhs) => ValDef(
+        Modifiers(
+          mods.flags | DEFAULTPARAM, mods.privateWithin, mods.annotations
+        ),
+        name, tpt, rhs
+      )
+    }
+
     val result = {
       annottees.map(_.tree).toList match {
-//Thanks to Eugene Burmako and Den Shabalin
+        //Thanks to Eugene Burmako, Den Shabalin, and Travis Brown
         case q"$mods class $name[..$tparams](..$first)(...$rest) extends ..$parents { $self => ..$body }" :: Nil =>
-          val helloVal = q"""val x: String = "hello macro!""""
-          q"$mods class $name[..$tparams](..$first, $helloVal)(...$rest) extends ..$parents { $self => ..$body }"
+
+          val valName    = newTermName("x")
+          val valType    = tq"String"
+          val valDefault = q""""foo""""
+
+          val helloVal   = makeDefault(q"val $valName: $valType = $valDefault")
+          val vals = List(helloVal)
+
+          q"$mods class $name[..$tparams](..$vals)(...$rest) extends ..$parents { $self => ..$body }"
       }
     }
     c.Expr[Any](result)

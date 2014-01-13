@@ -7,15 +7,15 @@
 		revision="1.0.0"
 		conf="plugin"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20140109225734"/>
+		date="20140112112514"/>
 	<dependencies>
 		<module organisation="org.scalamacros" name="paradise_2.10.3">
-			<revision name="2.0.0-M2" status="release" pubdate="20140103020814" resolver="public" artresolver="public" homepage="https://github.com/scalamacros/paradise" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="0">
+			<revision name="2.0.0-M2" status="release" pubdate="20140103020814" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/scalamacros/paradise" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="0">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html"/>
-				<metadata-artifact status="successful" details="" size="2019" time="631" location="/home/julianpeeters/.ivy2/cache/org.scalamacros/paradise_2.10.3/ivy-2.0.0-M2.xml" searched="true" original-local-location="/home/julianpeeters/.ivy2/cache/org.scalamacros/paradise_2.10.3/ivy-2.0.0-M2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.pom"/>
+				<metadata-artifact status="no" details="" size="2873" time="0" location="/home/julianpeeters/.ivy2/cache/org.scalamacros/paradise_2.10.3/ivy-2.0.0-M2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.pom"/>
 				<caller organisation="org.scala-lang.macroparadise" name="macros_2.10" conf="plugin" rev="2.0.0-M2" rev-constraint-default="2.0.0-M2" rev-constraint-dynamic="2.0.0-M2" callerrev="1.0.0"/>
 				<artifacts>
-					<artifact name="paradise_2.10.3" type="jar" ext="jar" status="successful" details="" size="1170131" time="24678" location="/home/julianpeeters/.ivy2/cache/org.scalamacros/paradise_2.10.3/jars/paradise_2.10.3-2.0.0-M2.jar">
+					<artifact name="paradise_2.10.3" type="jar" ext="jar" status="no" details="" size="1170131" time="0" location="/home/julianpeeters/.ivy2/cache/org.scalamacros/paradise_2.10.3/jars/paradise_2.10.3-2.0.0-M2.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scalamacros/paradise_2.10.3/2.0.0-M2/paradise_2.10.3-2.0.0-M2.jar"/>
 					</artifact>
 				</artifacts>
