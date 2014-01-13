@@ -16,7 +16,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#macro-annotation-example-build;0.1-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#macro-annotation-example-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.2 [provided->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2fa7ef50[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1a308390[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.2[0m
 [0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-lang#scala-library;2.10.2[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.2 in sbt-chain[0m
@@ -1299,7 +1299,17 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#macro-annotation-example-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.2 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in /home/julianpeeters/Dropbox/macro-annotation-example/project/target/resolution-cache/default/macro-annotation-example-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.2!scala-library.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-library/2.10.2/jars/scala-library.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-library/2.10.2/jars/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-library/2.10.2/jars/scala-library.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-library/2.10.2/jars/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m		tried /home/julianpeeters/.ivy2/local/org.scala-lang/scala-library/2.10.2/jars/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.2/scala-library-2.10.2.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.2/scala-library-2.10.2.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.2/scala-library-2.10.2.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.2/scala-library-2.10.2.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.2/scala-library-2.10.2.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.10.2!scala-library.jar (11296ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#sbt;0.13.0!sbt.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#main;0.13.0!main.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.0!compiler-interface-src.jar[0m
@@ -1329,7 +1339,17 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#testing;0.13.0!testing.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.2!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#control;0.13.0!control.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.2!scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-reflect/2.10.2/jars/scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-reflect/2.10.2/jars/scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-reflect/2.10.2/jars/scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-reflect/2.10.2/jars/scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m		tried /home/julianpeeters/.ivy2/local/org.scala-lang/scala-reflect/2.10.2/jars/scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.2/scala-reflect-2.10.2.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.2/scala-reflect-2.10.2.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.2/scala-reflect-2.10.2.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.2/scala-reflect-2.10.2.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.2/scala-reflect-2.10.2.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.10.2!scala-reflect.jar (5245ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#collections;0.13.0!collections.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.11!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#incremental-compiler;0.13.0!incremental-compiler.jar[0m
@@ -1346,7 +1366,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.0!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.2!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 10492ms :: artifacts dl 281ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 10318ms :: artifacts dl 19168ms[0m
 [0m[[0mdebug[0m] [0m	report for default#macro-annotation-example-build;0.1-SNAPSHOT compile produced in /home/julianpeeters/Dropbox/macro-annotation-example/project/target/resolution-cache/reports/default-macro-annotation-example-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#macro-annotation-example-build;0.1-SNAPSHOT runtime produced in /home/julianpeeters/Dropbox/macro-annotation-example/project/target/resolution-cache/reports/default-macro-annotation-example-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#macro-annotation-example-build;0.1-SNAPSHOT test produced in /home/julianpeeters/Dropbox/macro-annotation-example/project/target/resolution-cache/reports/default-macro-annotation-example-build-test.xml[0m
@@ -1360,5 +1380,5 @@
 [0m[[0mdebug[0m] [0m	report for default#macro-annotation-example-build;0.1-SNAPSHOT docs produced in /home/julianpeeters/Dropbox/macro-annotation-example/project/target/resolution-cache/reports/default-macro-annotation-example-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#macro-annotation-example-build;0.1-SNAPSHOT pom produced in /home/julianpeeters/Dropbox/macro-annotation-example/project/target/resolution-cache/reports/default-macro-annotation-example-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#macro-annotation-example-build;0.1-SNAPSHOT scala-tool produced in /home/julianpeeters/Dropbox/macro-annotation-example/project/target/resolution-cache/reports/default-macro-annotation-example-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (10492ms resolve - 281ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (10318ms resolve - 19168ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

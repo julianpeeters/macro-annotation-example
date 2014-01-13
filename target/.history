@@ -20,3 +20,15 @@ clean
 reload
 run
 exit
+run
+reload
+clean
+run
+clean
+reload
+run
+clean
+run
+clean
+run
+exit

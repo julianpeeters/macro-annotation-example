@@ -33,9 +33,10 @@ object helloMacro {
           val valDefault = q""""foo""""
 
           val helloVal   = makeDefault(q"val $valName: $valType = $valDefault")
+        //  val helloVal   = q"val $valName: $valType = $valDefault"
           val vals = List(helloVal)
 
-          q"$mods class $name[..$tparams](..$vals)(...$rest) extends ..$parents { $self => ..$body }"
+          q"$mods class $name[..$tparams](..$first, $helloVal)(...$rest) extends ..$parents { $self => ..$body }"
       }
     }
     c.Expr[Any](result)
