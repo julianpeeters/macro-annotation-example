@@ -8,11 +8,12 @@ object BuildSettings {
     scalacOptions ++= Seq(),
     scalaVersion := "2.10.3",
     resolvers += Resolver.sonatypeRepo("snapshots"),
+    resolvers += "spray" at "http://repo.spray.io/",
     libraryDependencies += "io.spray" %%  "spray-json" % "1.2.5",
     libraryDependencies += "com.gensler" %% "scalavro" % "0.4.0",
-    resolvers += "spray" at "http://repo.spray.io/",
+    libraryDependencies += "org.scalamacros" % "quasiquotes" % "2.0.0-M3" cross CrossVersion.full,
     resolvers += Resolver.sonatypeRepo("releases"),
-    addCompilerPlugin("org.scalamacros" % "paradise" % "2.0.0-M2" cross CrossVersion.full)
+    addCompilerPlugin("org.scalamacros" % "paradise" % "2.0.0-M3" cross CrossVersion.full)
   )
 }
 

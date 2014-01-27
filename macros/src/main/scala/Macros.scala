@@ -29,11 +29,12 @@ object helloMacro {
         case q"$mods class $name[..$tparams](..$first)(...$rest) extends ..$parents { $self => ..$body }" :: Nil =>
 
           val valName    = newTermName("x")
-          val valType    = tq"String"
-          val valDefault = q""""foo""""
+          val box = newTypeName("Option")
+          val boxed = newTypeName("String")
+          val valType    = tq"$box[$boxed]"
+          val valDefault = q"""Some("foo")"""
 
           val helloVal   = makeDefault(q"val $valName: $valType = $valDefault")
-        //  val helloVal   = q"val $valName: $valType = $valDefault"
           val vals = List(helloVal)
 
           q"$mods class $name[..$tparams](..$first, $helloVal)(...$rest) extends ..$parents { $self => ..$body }"
