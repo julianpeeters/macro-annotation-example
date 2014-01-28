@@ -7,7 +7,7 @@
 		revision="1.0.0"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20140127011114"/>
+		date="20140127223528"/>
 	<dependencies>
 		<module organisation="org.scalamacros" name="quasiquotes_2.10.3">
 			<revision name="2.0.0-M3" status="release" pubdate="20140124061457" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/scalamacros/paradise" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="24">

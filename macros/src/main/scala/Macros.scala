@@ -9,7 +9,6 @@ import scala.io._
 object helloMacro {
 
 
-
   def impl(c: Context)(annottees: c.Expr[Any]*): c.Expr[Any] = {
     import c.universe._
     import Flag._
@@ -23,21 +22,26 @@ object helloMacro {
       )
     }
 
+    def boxTypeTrees(typeName: String) = {
+      val types = typeName.dropRight(typeName.count( c => c == '[')).split('[').map(g => newTypeName(g)).toList  
+      val typeTrees: List[Tree] = types.map(t => tq"$t")
+      typeTrees.reduceRight((a, b) => tq"$a[$b]")
+    }
+
     val result = {
       annottees.map(_.tree).toList match {
+
         //Thanks to Eugene Burmako, Den Shabalin, and Travis Brown
-        case q"$mods class $name[..$tparams](..$first)(...$rest) extends ..$parents { $self => ..$body }" :: Nil =>
+        case q"$mods class $name[..$tparams](..$first)(...$rest) extends ..$parents { $self => ..$body }" :: Nil => {
 
-          val valName    = newTermName("x")
-          val box = newTypeName("Option")
-          val boxed = newTypeName("String")
-          val valType    = tq"$box[$boxed]"
-          val valDefault = q"""Some("foo")"""
+        val valName    = newTermName("x")
+        val valType = boxTypeTrees("List[Option[String]]")
+        val valDefault = q"""List(Some("foo"))"""
 
-          val helloVal   = makeDefault(q"val $valName: $valType = $valDefault")
-          val vals = List(helloVal)
+        val helloVal   = makeDefault(q"val $valName: $valType = $valDefault")
 
-          q"$mods class $name[..$tparams](..$first, $helloVal)(...$rest) extends ..$parents { $self => ..$body }"
+        q"$mods class $name[..$tparams](..$first, $helloVal)(...$rest) extends ..$parents { $self => ..$body }"
+        }
       }
     }
     c.Expr[Any](result)
