@@ -13,15 +13,6 @@ object helloMacro {
     import c.universe._
     import Flag._
 
-    def makeDefault(valDef: ValDef) = valDef match {
-      case ValDef(mods, name, tpt, rhs) => ValDef(
-        Modifiers(
-          mods.flags | DEFAULTPARAM, mods.privateWithin, mods.annotations
-        ),
-        name, tpt, rhs
-      )
-    }
-
     def boxTypeTrees(typeName: String) = {
       val types = typeName.dropRight(typeName.count( c => c == '[')).split('[').map(g => newTypeName(g)).toList  
       val typeTrees: List[Tree] = types.map(t => tq"$t")
@@ -38,7 +29,7 @@ object helloMacro {
         val valType = boxTypeTrees("List[Option[String]]")
         val valDefault = q"""List(Some("foo"))"""
 
-        val helloVal   = makeDefault(q"val $valName: $valType = $valDefault")
+        val helloVal   = q"val $valName: $valType = $valDefault"
 
         q"$mods class $name[..$tparams](..$first, $helloVal)(...$rest) extends ..$parents { $self => ..$body }"
         }
