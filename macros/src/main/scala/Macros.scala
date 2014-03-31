@@ -29,9 +29,12 @@ object helloMacro {
         val valType = boxTypeTrees("List[Option[String]]")
         val valDefault = q"""List(Some("foo"))"""
 
+        val newCtor = q"""def this() = this(List(Some("")))"""
+        val newBody = body :+ newCtor
+
         val helloVal   = q"val $valName: $valType = $valDefault"
 
-        q"$mods class $name[..$tparams](..$first, $helloVal)(...$rest) extends ..$parents { $self => ..$body }"
+        q"$mods class $name[..$tparams](..$first, $helloVal)(...$rest) extends ..$parents { $self => ..$newBody }"
         }
       }
     }

@@ -11,9 +11,9 @@ object BuildSettings {
     resolvers += "spray" at "http://repo.spray.io/",
     libraryDependencies += "io.spray" %%  "spray-json" % "1.2.5",
     libraryDependencies += "com.gensler" %% "scalavro" % "0.4.0",
-    libraryDependencies += "org.scalamacros" % "quasiquotes" % "2.0.0-M4" cross CrossVersion.full,
+    libraryDependencies += "org.scalamacros" % "quasiquotes" % "2.0.0-M6" cross CrossVersion.full,
     resolvers += Resolver.sonatypeRepo("releases"),
-    addCompilerPlugin("org.scalamacros" % "paradise" % "2.0.0-M4" cross CrossVersion.full)
+    addCompilerPlugin("org.scalamacros" % "paradise" % "2.0.0-M6" cross CrossVersion.full)
   )
 }
 
