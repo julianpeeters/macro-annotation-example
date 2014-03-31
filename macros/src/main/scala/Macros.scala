@@ -14,7 +14,7 @@ object helloMacro {
     import Flag._
 
     def boxTypeTrees(typeName: String) = {
-      val types = typeName.dropRight(typeName.count( c => c == '[')).split('[').map(g => newTypeName(g)).toList  
+      val types = typeName.dropRight(typeName.count( c => c == '[')).split('[').map(g => newTypeName(g)).toList
       val typeTrees: List[Tree] = types.map(t => tq"$t")
       typeTrees.reduceRight((a, b) => tq"$a[$b]")
     }
@@ -30,7 +30,23 @@ object helloMacro {
         val valDefault = q"""List(Some("foo"))"""
 
         val newCtor = q"""def this() = this(List(Some("")))"""
-        val newBody = body :+ newCtor
+
+        // It looks like typer sometimes uses positions to decide whether stuff
+        // (secondary constructors in this case) typechecks or not (?!!):
+        // https://github.com/xeno-by/scala/blob/c74e1325ff1514b1042c959b0b268b3c6bf8d349/src/compiler/scala/tools/nsc/typechecker/Typers.scala#L2932
+        //
+        // In general, positions are important in getting error messages and debug
+        // information right, but maintaining positions is too hard, so macro writers typically don't care.
+        //
+        // This has never been a problem up until now, but here we're forced to work around
+        // by manually setting an artificial position for the secondary constructor to be greater
+        // than the position that the default constructor is going to get after macro expansion.
+        //
+        // We have a few ideas how to fix positions in a principled way in Palladium,
+        // but we'll have to see how it goes.
+        val defaultCtorPos = c.enclosingPosition
+        val newCtorPos = defaultCtorPos.withEnd(defaultCtorPos.endOrPoint + 1).withStart(defaultCtorPos.startOrPoint + 1).withPoint(defaultCtorPos.point + 1)
+        val newBody = body :+ atPos(newCtorPos)(newCtor)
 
         val helloVal   = q"val $valName: $valType = $valDefault"
 
